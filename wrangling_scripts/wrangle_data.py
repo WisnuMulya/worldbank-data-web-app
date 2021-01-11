@@ -13,14 +13,13 @@ def cleandata(countries_iso=['us', 'cn', 'jp', 'de', 'gb', 'in', 'fr', 'br', 'it
     Saves the results to a csv file
 
     Args:
-        dataset (str): name of the csv data file
-
+        countries_iso (list[str]): iterable of countries iso code: https://www.nationsonline.org/oneworld/country_code_list.htm
+        date_interval (list[str]): iterable of data year period
     Returns:
-        None
+        df (pandas dataframe object): a pandas dataframe object containing clean data
 
     """
     #TODO: Obtain data from Worldbank's API
-    ## Four datasets, ten countries and from 1990 to 2015
     dataset_dict = {'AG.LND.ARBL.HA.PC': 'arable_land_per_person', \
                     'SP.RUR.TOTL.ZS':'rural_percentage', \
                     'SP.RUR.TOTL':'rural_population', \
